@@ -225,14 +225,7 @@ class Event extends React.Component {
         </style>
 
         <div className="EventPage">
-          <Header
-            title={event.name}
-            description={event.description || event.longDescription}
-            twitterHandle={event.parentCollective.twitterHandle}
-            image={event.parentCollective.image || backgroundImage}
-            className={this.state.status}
-            LoggedInUser={LoggedInUser}
-          />
+          <Header collective={event} className={this.state.status} LoggedInUser={LoggedInUser} />
 
           <Body>
             <div className={`EventPage ${this.state.modal && 'showModal'}`}>

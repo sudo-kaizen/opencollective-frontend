@@ -19,6 +19,7 @@ const Page = ({
   twitterHandle,
   showSearch,
   canonicalURL,
+  collective,
 }) => {
   if (data.error) {
     return <ErrorPage data={data} LoggedInUser={LoggedInUser} />;
@@ -35,6 +36,7 @@ const Page = ({
         description={description}
         image={image}
         canonicalURL={canonicalURL}
+        collective={collective}
       />
       <Body>{typeof children === 'function' ? children(childProps) : children}</Body>
       <Footer />
@@ -57,6 +59,7 @@ Page.propTypes = {
   showSearch: PropTypes.bool,
   title: PropTypes.string,
   twitterHandle: PropTypes.string,
+  collective: PropTypes.object,
 };
 
 Page.defaultProps = {

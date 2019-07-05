@@ -14,6 +14,8 @@ import CollectiveCover from './CollectiveCover';
 
 import { addCreateCollectiveMutation } from '../graphql/mutations';
 
+import { getCollectiveImage } from '../lib/utils';
+
 class CreateEvent extends React.Component {
   static propTypes = {
     parentCollective: PropTypes.object,
@@ -109,14 +111,7 @@ class CreateEvent extends React.Component {
           `}
         </style>
 
-        <Header
-          title={title}
-          description={collective.description}
-          twitterHandle={collective.twitterHandle}
-          image={collective.image || collective.backgroundImage}
-          className={this.state.status}
-          LoggedInUser={this.props.LoggedInUser}
-        />
+        <Header title={title} className={this.state.status} LoggedInUser={this.props.LoggedInUser} />
 
         <Body>
           <CollectiveCover

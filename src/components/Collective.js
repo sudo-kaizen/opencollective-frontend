@@ -220,14 +220,7 @@ class Collective extends React.Component {
           `}
         </style>
 
-        <Header
-          title={collective.name}
-          description={collective.description || collective.longDescription}
-          twitterHandle={collective.twitterHandle || get(collective.parentCollective, 'twitterHandle')}
-          image={collective.image || get(collective.parentCollective, 'image') || backgroundImage}
-          LoggedInUser={LoggedInUser}
-          href={`/${collective.slug}`}
-        />
+        <Header collective={collective} LoggedInUser={LoggedInUser} href={`/${collective.slug}`} />
 
         <Body>
           <div className={classNames('CollectivePage', { archiveCollective: collective.isArchived })}>

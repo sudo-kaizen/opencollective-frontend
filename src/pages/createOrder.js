@@ -895,9 +895,7 @@ class CreateOrderPage extends React.Component {
 
     return (
       <Page
-        description={collective.description}
-        twitterHandle={collective.twitterHandle}
-        image={collective.image || collective.backgroundImage}
+        collective={collective}
         title={eventSlug ? `Order tickets - ${collective.name}` : `Contribute - ${collective.name}`}
       >
         <Flex alignItems="center" flexDirection="column" mx="auto" width={300} pt={4} mb={4}>
