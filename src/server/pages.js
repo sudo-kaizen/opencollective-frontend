@@ -148,7 +148,14 @@ pages.add(
 
 // New collective page
 pages.add('new-collective-page', '/:slug/v2');
+// Hardcode some collectives for the beta program
+pages.add(
+  'new-collective-page-beta',
+  '/:slug(general-intellect|piamancini-collective|democracyearth|captainfact_io)',
+  'new-collective-page',
+);
 
+// Legacy collective page
 pages.add('collective', '/:slug');
 
 export default pages;
