@@ -177,9 +177,6 @@ export const getCollectiveToEditQueryFields = `
   id
   type
   slug
-  createdByUser {
-    id
-  }
   host {
     id
     createdAt
@@ -355,9 +352,6 @@ export const getCollectiveQuery = gql`
       type
       slug
       path
-      createdByUser {
-        id
-      }
       name
       company
       image
@@ -542,9 +536,6 @@ const getEventCollectiveQuery = gql`
       type
       slug
       path
-      createdByUser {
-        id
-      }
       name
       image
       backgroundImage
@@ -666,9 +657,6 @@ const getCollectiveCoverQuery = gql`
           all
         }
       }
-      createdByUser {
-        id
-      }
       host {
         id
         slug
@@ -707,9 +695,6 @@ export const getSubscriptionsQuery = gql`
       id
       type
       slug
-      createdByUser {
-        id
-      }
       name
       company
       image
@@ -748,9 +733,6 @@ export const getSubscriptionsQuery = gql`
         fromCollective {
           id
           slug
-          createdByUser {
-            id
-          }
         }
         paymentMethod {
           id

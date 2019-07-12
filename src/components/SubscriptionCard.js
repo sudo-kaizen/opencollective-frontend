@@ -619,9 +619,6 @@ const updateSubscriptionQuery = gql`
       fromCollective {
         id
         slug
-        createdByUser {
-          id
-        }
       }
       paymentMethod {
         id
